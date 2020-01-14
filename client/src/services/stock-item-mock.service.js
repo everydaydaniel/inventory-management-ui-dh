@@ -4,7 +4,6 @@ export class StockItemMockService {
   async listStockItems() {
     // wait a second before returning data
     await timer(1000);
-
     return [
       {
         "name": "Item 1",
