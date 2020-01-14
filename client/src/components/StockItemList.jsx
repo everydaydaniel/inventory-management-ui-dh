@@ -70,10 +70,9 @@ class StockItemList extends Component {
   }
 
   async componentDidMount() {
-
     this.setState({
-      data: this.data,
-    })
+      data: await this.props.stockService.listStockItems()
+    });
   }
 
   onRowClick = id => {

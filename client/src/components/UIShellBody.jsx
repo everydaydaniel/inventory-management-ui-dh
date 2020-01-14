@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "../pattern-components/patterns.scss";
 import StockItemList from "./StockItemList";
+
 class UIShellBody extends Component {
   components = {
     "Stock Items": StockItemList
@@ -12,7 +13,7 @@ class UIShellBody extends Component {
     ];
     return (
       <div className="pattern-container">
-        <PatternName showDescription={true} />
+        <PatternName showDescription={true} stockService={this.props.stockService} />
       </div>
     );
   }
